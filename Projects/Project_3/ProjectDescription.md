@@ -1,4 +1,4 @@
-# Project 2: Mancala (Kalah) Game Implementation
+# Project 3: Mancala (Kalah) Game Implementation
 
 This project implements the game of Mancala (Kalah) in C++, allowing for human and computer players. The game mechanics include sown seeds, capturing moves, and turn-based gameplay with support for AI decision-making.
 
