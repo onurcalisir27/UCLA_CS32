@@ -1,0 +1,41 @@
+Homework 4
+Onur Calisir 
+uid = 605489394.
+
+1e)
+During execution of test case 3, an iterator is used to traverse the elements of vector v2, which initially has a size of 5, but when k = 2, the loop pushes back 5 more values, causing the iterator to become invalidated. We cant increment an invalidated iterator because the iterator is initialized during complitation and cant adjust during execution.
+
+3)
+This call results in an compilation error because when sc.insert(Coord(40, 10));  is called, the compiler attempts to compare the 'value' of the argument to the 'value' of the other objects in the Sequence. This works for types such as int's string's as they can be compared by using a simple > or < operator but the compiler has no way of telling which object of Coord has a greater value ,as no >,< operator has been overloaded by the class to tell the compiler. This results in a compilation error since compiler cannot use the compare operator and fails.
+
+4)
+B.
+The one-parameter listAll function cannot be implemented recursively to solve the problem because the one-parameter function has no way of keeping track of the paths. At each recursive call, the path we declared would be invalid and the function wouldnt be able to access the required paths to come up with the desired output.
+
+5)
+A.
+O(N^3): there are 3 nested for loops all iterating thru 0 to N ,so after simplifications we have O(N)*O(N)*O(N) = O(N^3).
+
+B.
+Time complexity is still O(N^3). Even though by symmetry we can decrease the loop limit of the second loop to i instead of N, in the worst case scenario i = N causing the second loop to loop thru N times. So at worst case scenario time complexity => O(N^3), best case scenario, using symmetry => O(N^2). Results in Average case => O(N^3).
+
+6)
+A.
+time complexity of this function is O(N^2):
+
+    first for loop has loop limit of N ==> O(N) * O(N) ==== O(N^2/2) = O(N^2)
+    {       get function call ==> get function runs thru a loop of size(N) ==> O(N) * O(1) = O(N)
+           insert function call ===> visits a constant number of nodes untill it gets to the target Node ==> O(constant) = O(1)
+    }
+
+The second loop does the same thing and has a time complexity of O(N^2)
+Together O(N^2)+O(N^2) = O(2N^2) ==> O(N^2) // simplified.
+
+B.
+time complexity is now O(N). this is better than our result for part a). The time complexity is greatly reduced by not using the second for loop introduced by the get function:
+ 
+      first for loop has loop limit of N // visits every Node(N) ===> O(N) * O(constant) = O(N) // answer
+        insertBefore function call ==> visits a constant number of nodes untill it gets to the target Node ==> O(constant)
+
+The second loop does the same thing and has a time complexity of O(N)
+Together O(N)+O(N) = O(2N) ==> O(N) // simplified.
