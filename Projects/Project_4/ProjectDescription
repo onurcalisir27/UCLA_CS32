@@ -1,0 +1,62 @@
+# Project 4: Anagram Dictionary
+
+This project implements an **Anagram Dictionary** using C++ with an efficient hash-based approach. The dictionary supports building a collection of words and finding anagrams of a given string using a custom hash function.
+
+## Objectives
+- Develop an efficient dictionary for storing and retrieving words.
+- Implement a custom hash function for grouping anagrams in hash buckets.
+- Practice using C++ containers like `vector` and `list` for data organization.
+
+## Features
+1. **Dictionary**:
+   - Build a dictionary from a word list.
+   - Insert words into hash buckets based on their sorted characters.
+
+2. **Anagram Lookup**:
+   - Search for all anagrams of a given string efficiently.
+   - Use a hash function and bucket-based organization to minimize search time.
+
+3. **Interactive Tester**:
+   - Interactive CLI to load a dictionary file, input strings, and see their anagrams.
+
+## File Descriptions
+1. **`Dictionary.h` and `Dictionary.cpp`**:
+   - Defines the `Dictionary` class with methods for inserting words and looking up anagrams.
+   - Implements the hash function, bucket storage, and sorting logic.
+
+2. **`interactivetester.cpp`**:
+   - Interactive CLI tool to test the dictionary's functionality.
+   - Allows users to load a word list, input strings, and retrieve their anagrams.
+
+3. **`words.txt`**:
+   - Sample word list containing words to build the dictionary.
+
+## Challenges Overcome
+- Designing an efficient hash function to group anagrams into the same bucket.
+- Debugging edge cases like strings with non-alphabetic characters or empty inputs.
+- Ensuring the lookup process is both fast and accurate.
+
+## Sample Usage
+1. **Building the Dictionary**:
+   ```cpp
+   Dictionary dict;
+   dict.insert("listen");
+   dict.insert("silent");
+   dict.insert("enlist");
+
+2. **Anagram Lookup**:
+   ```cpp
+  void callback(string anagram) { cout << anagram << endl; }
+  dict.lookup("listen", callback); // Outputs: silent enlist
+
+3. **Interactive Tester**:
+Enter name of dictionary file: words.txt
+Enter a set of letters: listen
+Anagrams of listen:
+  silent
+  enlist
+
+## Skills Developed
+  - Designing efficient algorithms using hashing and sorting.
+  - Implementing dynamic memory structures using vector and list.
+  - Building an interactive CLI for testing and validation.
