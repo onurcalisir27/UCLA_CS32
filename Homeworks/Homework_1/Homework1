@@ -1,0 +1,41 @@
+# Homework 1: Sequences and Rainfall Management
+
+This homework implements C++ classes to simulate dynamic and static sequences and manage rainfall data. The tasks involve creating reusable data structures, validating input, and testing functionality through assertions.
+
+## Objectives
+- Practice implementing and managing dynamic memory in C++.
+- Understand and apply the principles of object-oriented programming.
+- Develop robust testing strategies for custom data structures.
+
+## Features
+1. **Sequence Class**:
+   - Implements a fixed-size array-based sequence.
+   - Supports operations like insertion, deletion, retrieval, and swapping.
+
+2. **Dynamic Sequence Class (`newSequence`)**:
+   - Extends the `Sequence` class to support dynamic array sizes.
+   - Includes constructors, destructors, and copy semantics for safe memory management.
+
+3. **Rainfall List**:
+   - Manages rainfall data with constraints on valid values.
+   - Provides functionality to add, remove, and retrieve rainfall statistics (minimum, maximum).
+
+## File Descriptions
+1. **`Sequence.h` and `Sequence.cpp`**:
+   - Defines and implements a fixed-size array-based sequence with basic operations.
+
+2. **`newSequence.h` and `newSequence.cpp`**:
+   - Dynamic implementation of the `Sequence` class with memory management and copy semantics.
+
+3. **`RainfallList.h` and `RainfallList.cpp`**:
+   - Implements the `RainfallList` class for managing rainfall data, integrating the `Sequence` class for storage.
+
+4. **Test Files**:
+   - **`testSequence.cpp`**: Tests the static `Sequence` class with assertions.
+   - **`testnewSequence.cpp`**: Tests the dynamic `newSequence` class.
+   - **`testRainfallList.cpp`**: Placeholder for testing the `RainfallList` class.
+
+## Challenges Overcome
+- Ensuring memory safety with custom destructors and copy constructors.
+- Debugging logic for dynamic insertion and resizing in `newSequence`.
+- Designing a flexible API for managing rainfall data constraints.
