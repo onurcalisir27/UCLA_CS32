@@ -1,0 +1,38 @@
+Onur Calisir
+605489394
+
+2) First 12 coordinates pop'ed by the stack:
+
+(3,4)
+(3,3)
+(3,5)
+(2,5)
+(1,5)
+(1,6)
+(1,7)
+(1,8)
+(2,8)
+(3,6)
+(4,4)
+(5,4)
+
+
+4) First 12 coordinates pop'ed by the queue:
+
+(3,4)
+(4,4)
+(3,5)
+(3,3)
+(5,4)
+(3,6)
+(2,5)
+(6,4)
+(5,5)
+(1,5)
+(7,4)
+(5,6)
+
+The stack maze operates in a depth first manner, exploring as many as long as it can along a path and backtracks to restart if it was unsuccesfull after exhausting that path. So the stack explores the celles that were more recently added.
+
+The queue maze operates in a breadth first manner, exploring all cells around before moving on the next cell. A queue maze would be more efficent to reach the ending location in the shortest path as it is more optimized. So queue explores the cells closer to the starting coordiantes first before moving on.
+To summarize, a stack maze can be more usefull to find all paths that lead to the end coordinates whereas the queue maze is more effiecent to find the shortes path to the ending coordinate.
